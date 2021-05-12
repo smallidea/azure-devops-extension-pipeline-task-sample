@@ -355,3 +355,4 @@ build/
 **/*.vsix
 out
 local
+.ds_store
