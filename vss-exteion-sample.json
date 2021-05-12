@@ -1,0 +1,89 @@
+{
+    "manifestVersion": 1,
+    "id": "devops-pipeline-task",
+    "publisher": "lean-soft",
+    "version": "1.0.0",
+    "name": "流水线插件示例",
+    "description": "",
+    "public": true,
+    "categories": [
+        "Azure Boards"
+    ],
+    "scopes": [
+        "vso.work",
+        "vso.work_write"
+    ],
+    "icons": {
+        "default": "src/static/images/favicon-leansoftx.ico"
+    },
+    "links": {
+        "learn": {
+            "uri": "https://github.com/smallidea/azure-devops-extension-pipeline-task-sample/blob/main/README.md"
+        },
+        "support": {
+            "uri": "https://github.com/smallidea/azure-devops-extension-pipeline-task-sample"
+        },
+        "repository": {
+            "uri": "https://github.com/smallidea/azure-devops-extension-pipeline-task-sample"
+        },
+        "issues": {
+            "uri": "https://github.com/smallidea/azure-devops-extension-pipeline-task-sample/issues"
+        }
+    },
+    "targets": [
+        {
+            "id": "Microsoft.TeamFoundation.Server"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "details.md"
+        }
+    },
+    "tags": [
+        "Pipeline",
+        "Pipeline Task",
+        "Pipeline Task Sample"
+    ],
+    "contributions": [
+        {
+            "id": "pipeline-task-sample",
+            "type": "ms.vss-work-web.work-item-form-control",
+            "description": "",
+            "targets": [
+                "ms.vss-work-web.work-item-form"
+            ],
+            "properties": {
+                "name": "Unique Field Control",
+                "uri": "dist/sample/index.html",
+                "height": 50,
+                "inputs": [
+                    {
+                        "id": "FieldName",
+                        "name": "Field",
+                        "type": "WorkItemField",
+                        "properties": {
+                            "workItemFieldTypes": [
+                                "String"
+                            ]
+                        },
+                        "validation": {
+                            "dataType": "String",
+                            "isRequired": true
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "files": [
+        {
+            "path": "dist/",
+            "addressable": true
+        },
+        {
+            "path": "src/",
+            "addressable": true
+        }
+    ]
+}

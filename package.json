@@ -1,20 +1,28 @@
 {
   "name": "ads-pipeline-extension-sample",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "azure devops 流水线插件的示例",
-  "main": "index.js",
+  "author": "Lean-Soft",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf ./dist ./out/*sample*.vsix ./out/*sample*.zip",
+    "precompiled:sample": "npm run clean && tsc --build ./src/tasks/sample/tsconfig.json",
+    "package:prod:sample": "npm run precompiled:sample && tfx extension create --rev-version --manifest-globs vss-extension-sample.json --output-path ./out",
+    "publish:test:sample": "npm run precompiled:sample && tfx extension publish --rev-version --manifest-globs vss-extension-sample.json --output-path out --service-url https://tfs.devopshub.cn/ --token {token}"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smallidea/ads-pipeline-extension-sample.git"
+    "url": "https://github.com/smallidea/azure-devops-extension-custom-control-sample"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/smallidea/ads-pipeline-extension-sample/issues"
+  "dependencies": {
+    "@types/jquery": "^3.5.0",
+    "@types/q": "^1.5.4",
+    "vss-web-extension-sdk": "^5.141.0"
   },
-  "homepage": "https://github.com/smallidea/ads-pipeline-extension-sample#readme"
+  "devDependencies": {
+    "typescript": "^3.9.7",
+    "rimraf": "~2.6.2"
+  },
+  "release": {
+    "plugins": []
+  }
 }
