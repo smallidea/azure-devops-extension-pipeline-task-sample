@@ -25,7 +25,7 @@ npm install
 cd src/tasks/sample && npm i && cd ../../../
 ```
 
-2. 点击F5可以进行调试，调试的相关配置在 `.vscode\launch.json` 文件中 
+2. 点击F5可以进行调试，调试的相关配置在 `.vscode\launch.json` 文件中 ，可参考 [使用vs code调试](https://code.visualstudio.com/docs/editor/debugging)
 3. 运行 `npm run publish`，里面的tfs地址和token需要根据具体项目进行修改
 
 4. 手动安装并启用插件
