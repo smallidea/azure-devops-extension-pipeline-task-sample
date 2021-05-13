@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "devops-pipeline-task-sample",
     "publisher": "lean-soft",
-    "version": "1.0.8",
+    "version": "1.0.17",
     "name": "流水线插件示例",
     "description": "",
     "public": true,
@@ -69,8 +69,7 @@
         },
         {
             "path": "src/static/images/favicon-leansoftx.ico",
-            "addressable": true,
-            "packagePath": "logo.ico"
+            "packagePath": "sample/icon.png"
         }
     ]
 }
