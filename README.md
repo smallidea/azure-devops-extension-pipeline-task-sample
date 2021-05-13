@@ -30,7 +30,7 @@ cd src/tasks/sample && npm i && cd ../../../
 
 2. 点击F5可以进行调试，调试的相关配置在 `.vscode\launch.json` 文件中 ，可参考 [使用vs code调试](https://code.visualstudio.com/docs/editor/debugging)
 3. 运行 `npm run publish`，里面的tfs地址和token需要根据具体项目进行修改
-> 在CI（管道）中有一个勾选功能“启用系统诊断”，如果是CD（发布）需要手动设置System.Debug为true
+   > 如果需要在流水线中看到debug信息，CI（管道）中有一个勾选功能“启用系统诊断”，如果是CD（发布）需要手动设置System.Debug为true
 4. 手动安装并启用插件
    - 集合设置 > 扩展 > 浏览本地插件 > 管理本地扩展 > 上传扩展 > 浏览本地文件上传插件
    - 点击进入插件详情 > 免费获取 > 选择集合，点击启用
