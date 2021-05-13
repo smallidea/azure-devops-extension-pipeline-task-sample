@@ -5,7 +5,10 @@
 ## 概述
 正如标题所述这是一个简易的流水线任务插件的示例，比起官方的要简单很多，可以让大家快速上手。
 
-TODO: 截图
+输入框
+<img src='src/static/images/sample-inputs.png' />
+流水线运行结果
+<img src='src/static/images/sample-result.png' />
 
 **参考文档**
 - 官方教程: https://docs.microsoft.com/zh-cn/azure/devops/extend/develop/add-build-task?view=azure-devops
@@ -38,8 +41,31 @@ cd src/tasks/sample && npm i && cd ../../../
 
 ## 开发
 1. 目录结构
-
+``` tree
+.
+├── README.md              
+├── develop.md
+├── package.json                          npm run 所用到的命令配置
+├── src                                   源码文件
+│   ├── static                            静态文件
+│   │   └── images                        目前只有一个logo文件
+│   └── tasks                             流水线任务集合
+│       └── sample                        流水线任务示例
+│           └── task.json                 任务中的配置
+│           └── tsconfig.json             typescript的相关配置
+│           └── package.json              引用的包配置，需要在sample目录下执行npm i
+│           └── index.ts                  主文件
+└── vss-extension-sample.json             插件发布配置文件
+```
 2. API
+
+`azure-pipelines-task-lib`
+
+| 函数                   | 用途                                                                     |
+| --------------------------- | ------------------------------------------------------------------------- |
+| getInput()                  | 获取流水线上输入框录入的值      |
+
+
 
 ## 
 
