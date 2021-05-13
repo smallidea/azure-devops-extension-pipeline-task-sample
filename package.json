@@ -4,10 +4,10 @@
   "description": "azure devops 流水线插件的示例",
   "author": "Lean-Soft",
   "scripts": {
-    "clean": "rimraf ./dist ./out/*sample*.vsix ./out/*sample*.zip",
+    "clean": "rimraf ./dist ./out/*pipeline-task*.vsix ./out/*pipeline-task*.zip",
     "precompiled:sample": "npm run clean && tsc --build ./src/tasks/sample/tsconfig.json",
     "package:prod:sample": "npm run precompiled:sample && tfx extension create --rev-version --manifest-globs vss-extension-sample.json --output-path ./out",
-    "publish:test:sample": "npm run precompiled:sample && tfx extension publish --rev-version --manifest-globs vss-extension-sample.json --output-path out --service-url https://tfs.devopshub.cn/ --token {token}"
+    "publish:test:sample": "npm run precompiled:sample && tfx extension publish --rev-version --manifest-globs vss-extension-sample.json --output-path out --service-url https://tfs.devopshub.cn/ "
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
     "vss-web-extension-sdk": "^5.141.0"
   },
   "devDependencies": {
+    "azure-pipelines-task-lib": "^3.1.2",
     "typescript": "^3.9.7",
     "rimraf": "~2.6.2"
   },

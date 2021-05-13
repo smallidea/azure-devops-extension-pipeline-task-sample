@@ -1,27 +1,27 @@
 {
     "$schema": "https://github.com/Microsoft/azure-pipelines-task-lib/blob/master/tasks.schema.json",
-    "id": "5c6fa59e-1d5a-4516-9127-b9efd05df306",
+    "id": "40c1dca2-6990-458b-b57a-58eb596b4219",
     "name": "azure-devops-extension-pipeline-task-sample",
     "friendlyName": "Azure Devops Pipeline Task Sample",
-    "description": "Azure Devops Pipeline Task Sample",
+    "description": "流水线自定义任务示例",
     "author": "Lean-Soft",
     "helpMarkDown": "",
     "category": "Utility",
     "version": {
-        "Major": 3,
+        "Major": 1,
         "Minor": 1,
-        "Patch": 0
+        "Patch": 1
     },
     "visibility": [
         "Build",
         "Release"
     ],
-    "instanceNameFormat": "Echo $(samplestring)",
+    "instanceNameFormat": "Hello $(samplestring)",
     "inputs": [
         {
             "name": "input",
             "type": "string",
-            "label": "Hello",
+            "label": "Name",
             "defaultValue": "",
             "required": true,
             "helpMarkDown": "和Jason打个招呼吧！*^-^*'"

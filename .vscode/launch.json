@@ -11,8 +11,11 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/dist/tasks/sample/index.js",
-            "preLaunchTask": "build"
+            "program": "${workspaceFolder}/src/tasks/sample/index.ts",
+            "preLaunchTask": "build",
+            "env": {
+                "INPUT_sampleInput": "smallidea"
+            }
         }
     ]
 }

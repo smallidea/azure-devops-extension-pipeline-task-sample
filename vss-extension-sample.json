@@ -1,8 +1,8 @@
 {
     "manifestVersion": 1,
-    "id": "devops-pipeline-task",
+    "id": "devops-pipeline-task-sample",
     "publisher": "lean-soft",
-    "version": "1.0.0",
+    "version": "1.0.8",
     "name": "流水线插件示例",
     "description": "",
     "public": true,
@@ -37,53 +37,40 @@
     ],
     "content": {
         "details": {
-            "path": "details.md"
+            "path": "README.md"
         }
     },
     "tags": [
         "Pipeline",
         "Pipeline Task",
-        "Pipeline Task Sample"
+        "Pipeline Task Sample",
+        "Lean Soft",
+        "Jason Chen",
+        "http://smallidea.cnblogs.com",
+        "http://github.com/smallidea"
     ],
     "contributions": [
         {
             "id": "pipeline-task-sample",
-            "type": "ms.vss-work-web.work-item-form-control",
+            "type": "ms.vss-distributed-task.task",
             "description": "",
             "targets": [
-                "ms.vss-work-web.work-item-form"
+                "ms.vss-distributed-task.tasks"
             ],
             "properties": {
-                "name": "Unique Field Control",
-                "uri": "dist/sample/index.html",
-                "height": 50,
-                "inputs": [
-                    {
-                        "id": "FieldName",
-                        "name": "Field",
-                        "type": "WorkItemField",
-                        "properties": {
-                            "workItemFieldTypes": [
-                                "String"
-                            ]
-                        },
-                        "validation": {
-                            "dataType": "String",
-                            "isRequired": true
-                        }
-                    }
-                ]
+                "name": "sample"
             }
         }
     ],
     "files": [
         {
-            "path": "dist/",
-            "addressable": true
+            "path": "src/tasks/sample/",
+            "packagePath": "sample"
         },
         {
-            "path": "src/",
-            "addressable": true
+            "path": "src/static/images/favicon-leansoftx.ico",
+            "addressable": true,
+            "packagePath": "logo.ico"
         }
     ]
 }

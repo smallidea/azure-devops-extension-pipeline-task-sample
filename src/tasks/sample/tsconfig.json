@@ -2,11 +2,15 @@
     "compilerOptions": {
         "target": "ES6",
         "rootDir": "../../../src/",
-        "outDir": "../../../dist/",
+        "outDir": "./dist/",
         "sourceMap": true,
-        "module": "amd",
+        "module": "commonjs",
         "moduleResolution": "node",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "esModuleInterop": true,
+        "strict": true
     },
     "include": [
         "./*"
