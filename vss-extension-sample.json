@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "devops-pipeline-task-sample",
     "publisher": "lean-soft",
-    "version": "1.0.17",
+    "version": "1.0.18",
     "name": "流水线插件示例",
     "description": "",
     "public": true,
