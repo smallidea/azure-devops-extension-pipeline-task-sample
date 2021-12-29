@@ -28,8 +28,6 @@ workspace:
       - .:/home/project/pipeline-task-sample
       expose:
         - 3000
-      ports:
-        - 3001:3001
       networks:
         - pipeline-task-sample-network
 
